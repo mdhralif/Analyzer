@@ -154,3 +154,17 @@ pre {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+    color: #A0B2C6;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+footer strong {
+    color: var(--text-white);
+}
