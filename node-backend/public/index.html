@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QueueStorm Investigator Copilot</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Investigator Copilot</h1>
+            <p>AI SupportOps for Digital Finance</p>
+        </header>
+
+        <main>
+            <section class="input-section">
+                <h2>New Ticket</h2>
+                <form id="ticketForm">
+                    <div class="form-group">
+                        <label for="ticketId">Ticket ID</label>
+                        <input type="text" id="ticketId" value="TKT-001" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="complaint">Customer Complaint</label>
+                        <textarea id="complaint" rows="4" required>I sent 5000 taka to a wrong number around 2pm today, please reverse it!</textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="transactions">Recent Transactions (JSON format)</label>
+                        <textarea id="transactions" rows="6" required>[
+  {
+    "transaction_id": "TXN-9101",
+    "timestamp": "2026-04-14T14:08:22Z",
+    "type": "transfer",
+    "amount": 5000,
+    "counterparty": "+8801719876543",
+    "status": "completed"
+  }
+]</textarea>
+                    </div>
+
+                    <button type="submit" id="analyzeBtn">Analyze Ticket</button>
+                </form>
+            </section>
+
+            <section class="output-section">
+                <h2>AI Analysis Result</h2>
+                <div id="loader" class="loader hidden"></div>
+                <div id="result" class="result-box hidden">
+                    <pre id="jsonOutput"></pre>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
