@@ -79,7 +79,7 @@ Output ONLY valid JSON matching this schema:
     res.status(200).json(jsonResponse);
   } catch (error) {
     console.error("Error analyzing ticket:", error);
-    res.status(500).json({ error: "Internal server error" });
+    res.status(500).json({ error: "Internal server error", details: error.message });
   }
 });
 
