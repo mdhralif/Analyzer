@@ -54,7 +54,6 @@ Output ONLY valid JSON matching this schema:
       messages: [{ role: "user", content: prompt }],
       max_tokens: 800,
       temperature: 0.1,
-      provider: "hf-inference"
     });
 
     const replyContent = response.choices[0].message.content;
