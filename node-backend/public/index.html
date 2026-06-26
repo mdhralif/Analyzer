@@ -26,16 +26,18 @@
 
                     <div class="form-group">
                         <label for="transactions">Recent Transactions (JSON format)</label>
-                        <textarea id="transactions" rows="6" required>[
-  {
-    "transaction_id": "TXN-9101",
-    "timestamp": "2026-04-14T14:08:22Z",
-    "type": "transfer",
-    "amount": 5000,
-    "counterparty": "+8801719876543",
-    "status": "completed"
-  }
-]</textarea>
+                        <textarea id="transactions" rows="6" required>
+                    [
+                        {
+                            "transaction_id": "TXN-9101",
+                            "timestamp": "2026-04-14T14:08:22Z",
+                            "type": "transfer",
+                            "amount": 5000,
+                            "counterparty": "+8801719876543",
+                            "status": "completed"
+                        }
+                    ]
+                    </textarea>
                     </div>
 
                     <button type="submit" id="analyzeBtn">Analyze Ticket</button>
