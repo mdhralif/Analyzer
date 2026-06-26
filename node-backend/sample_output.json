@@ -1,17 +1,16 @@
 {
-  "ticket_id": "TKT-001",
+  "ticket_id": "TKT-7399",
   "relevant_transaction_id": "TXN-9101",
   "evidence_verdict": "consistent",
   "case_type": "wrong_transfer",
   "severity": "high",
-  "department": "dispute_resolution",
-  "agent_summary": "Customer reports accidentally sending 5000 BDT to the wrong number via TXN-9101.",
-  "recommended_next_action": "Verify TXN-9101 details with the customer and initiate the standard dispute resolution process.",
-  "customer_reply": "We have noted your concern regarding transaction TXN-9101. Please be assured that any eligible amount will be returned through official channels. We will contact you shortly with an update. Remember, we will never ask for your PIN or password.",
-  "human_review_required": true,
-  "confidence": 0.95,
+  "department": "payments_ops",
+  "agent_summary": "Customer sent 5000 Taka to a wrong number and is requesting a reversal.",
+  "recommended_next_action": "Verify the transaction and initiate a reversal through official channels.",
+  "customer_reply": "I understand your concern. I'll assist you with the reversal process. Please provide more details about the transaction.",
+  "human_review_required": false,
+  "confidence": 0.9,
   "reason_codes": [
-    "wrong_transfer",
-    "transaction_match"
+    "wrong_transfer"
   ]
 }
