@@ -8,7 +8,17 @@ document.getElementById('ticketForm').addEventListener('submit', async (e) => {
 
     const ticketId = document.getElementById('ticketId').value;
     const complaint = document.getElementById('complaint').value;
-    const transactionHistory = [];
+    let transactionHistory = [];
+
+    try {
+        const txInput = document.getElementById('transactions').value;
+        if (txInput.trim()) {
+            transactionHistory = JSON.parse(txInput);
+        }
+    } catch (err) {
+        alert("Invalid JSON format in Transaction History field.");
+        return;
+    }
 
     // UI Updates
     analyzeBtn.disabled = true;
