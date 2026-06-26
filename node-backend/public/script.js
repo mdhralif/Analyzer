@@ -6,7 +6,8 @@ document.getElementById('ticketForm').addEventListener('submit', async (e) => {
     const resultBox = document.getElementById('result');
     const jsonOutput = document.getElementById('jsonOutput');
 
-    const ticketId = document.getElementById('ticketId').value;
+    // Auto-generate a random ticket ID since we hid it from the UI
+    const ticketId = 'TKT-' + Math.floor(Math.random() * 10000).toString().padStart(4, '0');
     const complaint = document.getElementById('complaint').value;
     let transactionHistory = [];
 
